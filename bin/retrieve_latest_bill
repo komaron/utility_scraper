@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+Bundler.require(:default)
+
+require 'utility_scraper'
+require 'optparse'
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: bundle exec ruby bin/retrieve_latest_bill [username] [password]'
+end.parse!
+
+if (ARGV.size <= 0) || (ARGV.size > 2)
+  warn "Usage: #{$PROGRAM_NAME} Please specify your username and password for Dominon Power"
+  warn '       Example usage: bundle exec ruby bin/retrieve_latest_bill user_foo pass_bar'
+  warn ''
+else
+  username = ARGV[0].to_s
+  password = ARGV[1].to_s
+
+  UtilityScraper::Worker.new(username, password).perform
+end
