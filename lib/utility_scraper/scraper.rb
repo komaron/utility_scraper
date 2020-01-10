@@ -21,6 +21,8 @@ module UtilityScraper
       account_details
     end
 
+    private
+
     def login
       @page = agent.get(UTILITY_SITE)
 
