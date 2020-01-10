@@ -1,5 +1,5 @@
 # Utilities Scraper
-Using your login credentials to a utility company's website this scraper will extra data from the website and display it to you via the command line.
+Using your login credentials to a utility company's website this scraper will extract data from their website and display it to you via the command line.
 
 ## Dependencies
 - Mechanize
