@@ -1,0 +1,11 @@
+require 'rubygems'
+require 'mechanize'
+require 'colorize'
+require 'nokogiri'
+require 'pry'
+
+require 'utility_scraper/scraper'
+require 'utility_scraper/account_details'
+require 'utility_scraper/login_error'
+require 'utility_scraper/print_report'
+require 'utility_scraper/worker'
