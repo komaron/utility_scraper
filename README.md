@@ -3,7 +3,7 @@ Using your login credentials to a utility company's website this scraper will ex
 
 ## Dependencies
 - Mechanize
-- Nokoguri
+- Nokogiri
 - Colorize
 
 ## Basic Usage
